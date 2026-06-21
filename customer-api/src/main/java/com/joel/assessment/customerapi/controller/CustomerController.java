@@ -26,13 +26,11 @@ public class CustomerController {
         this.snowflakeCustomerService = snowflakeCustomerService;
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public ResponseEntity<PageResponseDto<CustomerDto>> getCustomers(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "5") int size) {
-//        System.out.println("SNOWFLAKE_ACCOUNT = " + System.getenv("SNOWFLAKE_ACCOUNT"));
-//        System.out.println("SNOWFLAKE_WAREHOUSE = " + System.getenv("SNOWFLAKE_WAREHOUSE"));
-//        System.out.println("SNOWFLAKE_SCHEMA = " + System.getenv("SNOWFLAKE_SCHEMA"));
+
         return ResponseEntity.ok(snowflakeCustomerService.findCustomers(page, size));
     }
 
