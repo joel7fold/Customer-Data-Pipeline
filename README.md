@@ -25,13 +25,16 @@ Snowflake → customer-api → Kafka → kafka-consumer → MongoDB
 From the root folder:
 
 ```bash
+docker compose pull
+```
+Start Kafka and MongoDB containers:
+```bash
 docker compose up -d
 ```
-
-This starts:
-
-* Kafka
-* MongoDB
+Verify the containers are running:
+```bash
+docker compose ps
+```
 
 To verify:
 
@@ -75,5 +78,16 @@ mvn test
 | GET    | `/api/customers/fetch/{id}`    | Fetches a customer by ID and sends it to Kafka |
 | GET    | `/api/customers/mongo`         | Returns customers stored in MongoDB            |
 
-## API DOC
+## API Documentation
 http://localhost:8080/swagger-ui/index.html
+
+## Optional Python Script
+
+A Python script is included to consume the MongoDB API endpoint and save the response to a local text file.
+
+Run it from the `scripts` folder:
+
+```bash
+cd scripts
+python3 mongoCustomers.py
+```
