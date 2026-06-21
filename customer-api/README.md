@@ -5,11 +5,11 @@
 
 The service uses Snowflake JDBC.
 
-The following environment variables are required in the .env file:  
+A .**env** file must be created in the root directory with the following environment variables:  
 ```env
-SNOWFLAKE_ID
-SNOWFLAKE_USERNAME
-SNOWFLAKE_PASSWORD
+SNOWFLAKE_ID=yourId
+SNOWFLAKE_PASSWORD=yourPassword
+SNOWFLAKE_USERNAME=yourUser
 ```
 
 Example `application.properties`:
