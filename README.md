@@ -71,7 +71,7 @@ mvn test
 
 | Method | Endpoint                       | Description                                    |
 | ------ | ------------------------------ | ---------------------------------------------- |
-| GET    | `/api/customers?page=0&size=5` | Retrieves paginated customers from Snowflake   |
+| GET    | `/api/customers` | Retrieves paginated customers from Snowflake   |
 | GET    | `/api/customers/fetch/{id}`    | Fetches a customer by ID and sends it to Kafka |
 | GET    | `/api/customers/mongo`         | Returns customers stored in MongoDB            |
 
