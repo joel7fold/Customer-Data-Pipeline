@@ -1,0 +1,11 @@
+target/
+*.class
+.idea/
+*.iml
+out/
+.DS_Store
+*.log
+# Environment variables
+.env
+customer-api/target/
+kafka-consumer/target/
